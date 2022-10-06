@@ -19,3 +19,6 @@ values ('0010', 'Pagramatics', '4 4th Ln', 'Chicago', 'UD'),
 
 UPDATE bookbiz01.publishers 
 set `city` = 'Atlanta', `state` = 'GA';
+
+delete from bookbiz01.publishers
+where pub_id = '0010';
