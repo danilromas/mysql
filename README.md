@@ -60,7 +60,6 @@ insert into bookbiz.titles(title_id, title, type, pub_id, price, advance, ytd_sa
 value('0001', 'GOF', 'PS4', '0736', '5000', '25', '2000', '', 'RPG ', '05.12.20022'), 
 ('0002', 'Spice and Wolf' , 'PC', '0002', '2000', '666', '2500', '', 'RP', '12.05.2020'); 
 DELETE FROM bookbiz.titles WHERE title_id = 0002; 
-update bookbiz.titles set price = price*2;
- select title, pub_name from bookbiz.titles, bookbiz.publishers where publishers.pub_id = titles.pub_id; 
- select *from bookbiz.titles select клиент, id_Клиента from turistmag.клиент, turistmag.снаряжение where снаряжение.idСнаряжение = клиент.id_Клиента; 
+update bookbiz.titles set price = price*2; 
+select title, pub_name from bookbiz.titles, bookbiz01.publishers where publishers.pub_id = titles.pub_id; 
 } 
