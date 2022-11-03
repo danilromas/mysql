@@ -48,7 +48,7 @@ select title, pub_name from bookbiz.titles, bookbiz.publishers where publishers.
 select *from bookbiz.titles
 select клиент, id_Клиента from turistmag.клиент, turistmag.снаряжение where снаряжение.idСнаряжение = клиент.id_Клиента;
 */
-(2 лаба){
+(5 лаба){
 SET SQL_SAFE_UPDATES =0;
 CREATE DATABASE IF NOT EXISTS bookbiz;
 
@@ -63,3 +63,22 @@ DELETE FROM bookbiz.titles WHERE title_id = 0002;
 update bookbiz.titles set price = price*2; 
 select title, pub_name from bookbiz.titles, bookbiz01.publishers where publishers.pub_id = titles.pub_id; 
 } 
+(6 лаба)
+{
+select title_id, publishers.*from bookbiz.titles, publishers where bookbiz.titles.pub_id = publishers.pub_id;
+
+select pub_id, pub_name
+from publishers;
+
+select pub_name, pub_id
+from publishers;
+
+select title, advance*2 as Double_Advance
+from titles;
+
+select title_id, ytd_sales*price
+from titles;
+
+select title_id, ytd_sales*(price-advance)
+from titles;
+}
