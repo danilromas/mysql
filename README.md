@@ -48,4 +48,19 @@ select title, pub_name from bookbiz.titles, bookbiz.publishers where publishers.
 select *from bookbiz.titles
 select клиент, id_Клиента from turistmag.клиент, turistmag.снаряжение where снаряжение.idСнаряжение = клиент.id_Клиента;
 */
+(2 лаба){
+SET SQL_SAFE_UPDATES =0;
+CREATE DATABASE IF NOT EXISTS bookbiz;
 
+CREATE TABLE bookbiz.titles(title_id char(6) not null, title varchar(80) not null, type char(12) null, pub_id char(4) null, price int null, advance int null,  ytd_sales int null,  contract bit not null, notes varchar(200) null, pubdate datetime null);
+
+SELECT * FROM bookbiz.titles;
+
+insert into bookbiz.titles(title_id, title, type, pub_id, price, advance, ytd_sales,contract, notes, pubdate) 
+value('0001', 'GOF', 'PS4', '0736', '5000', '25', '2000', '', 'RPG ', '05.12.20022'), 
+('0002', 'Spice and Wolf' , 'PC', '0002', '2000', '666', '2500', '', 'RP', '12.05.2020'); 
+DELETE FROM bookbiz.titles WHERE title_id = 0002; 
+update bookbiz.titles set price = price*2;
+ select title, pub_name from bookbiz.titles, bookbiz.publishers where publishers.pub_id = titles.pub_id; 
+ select *from bookbiz.titles select клиент, id_Клиента from turistmag.клиент, turistmag.снаряжение where снаряжение.idСнаряжение = клиент.id_Клиента; 
+} 
